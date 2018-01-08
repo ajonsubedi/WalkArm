@@ -12,16 +12,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.set_new_alarm_layout);
 
         btnNewAlarm = (Button)findViewById(R.id.btnNewAlarm);
 
-        btnNewAlarm.setOnClickListener(new View.OnClickListener(){
+       /* btnNewAlarm.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
 
             }
-        });
+        });*/
     }
 }
