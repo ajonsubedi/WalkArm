@@ -19,4 +19,12 @@
         <receiver android:name=".MyAlarmAdapter"/>
     </application>
 
+    <!--stepCounter-->
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
 </manifest>
