@@ -20,9 +20,10 @@ import java.text.SimpleDateFormat;
 
 public class StepCountFunction {
 
-    private String stepDetectorText;
-    private String stepCounterText;
-    private String stepDetectorTimeText;
+    public String stepDetectorText;
+
+    public String stepCounterText;
+    public String stepDetectorTimeText;
 
     private String isSupportStepDetector;
     private String isSupportStepCounter;
