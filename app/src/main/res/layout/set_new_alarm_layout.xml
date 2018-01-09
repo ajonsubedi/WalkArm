@@ -20,19 +20,15 @@
        android:textColor="@android:color/white"
        android:layout_gravity="center"
        android:id="@+id/btnSetTime"/>
-    <!-- <TimePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:headerBackground="@color/colorPrimary"
-        android:numbersSelectorColor="@color/colorPrimary"
-        android:id="@+id/timePicker"></TimePicker>-->
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Repeat"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/lblRepeat"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,14 +83,15 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
-        ></View>
+        android:id="@+id/view1"></View>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alarm name"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/lblAlarmName"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -104,23 +101,25 @@
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
         android:layout_marginTop="10dp"
-        ></View>
+        android:id="@+id/view2"></View>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Set steps"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtSteps"/>
     <NumberPicker
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:id="@+id/numberPicker"></NumberPicker>
+        android:layout_height="60dp"
+        android:id="@+id/numberPicker"
+        android:layout_marginTop="10dp"></NumberPicker>
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
         android:layout_marginTop="10dp"
-        ></View>
+        android:id="@+id/view3"></View>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -131,7 +130,8 @@
             android:layout_height="wrap_content"
             android:text="Snooze"
             android:layout_gravity="left"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:id="@+id/lblSnooze"/>
 
         <ToggleButton
             android:layout_width="50dp"
