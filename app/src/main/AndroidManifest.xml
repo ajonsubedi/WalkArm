@@ -28,7 +28,6 @@
 
         <receiver android:name=".MyAlarmAdapter" />
 
-        <activity android:name=".StepCount"></activity>
     </application>
 
 </manifest>
