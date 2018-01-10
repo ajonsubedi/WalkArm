@@ -25,12 +25,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+
+        <receiver android:name=".MyAlarmAdapter" />
+
+=======
         <activity android:name=".setAlarm"
                   android:label="setAlarm"
                   android:theme="@style/AppTheme">
 
-        <receiver android:name=".MyAlarmAdapter" />
-
+        </activity>
+>>>>>>> 48bd56523cf5e479033b73bcc943e5e5476352b5
     </application>
 
 </manifest>

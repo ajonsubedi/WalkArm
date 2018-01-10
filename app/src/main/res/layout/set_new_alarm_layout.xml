@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06:00"
+        android:textSize="60dp"
+        android:layout_gravity="center"
+        android:id="@+id/txtSetTime"/>
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Set time"
+       android:background="@color/colorPrimaryDark"
+       android:textColor="@android:color/white"
+       android:layout_gravity="center"
+       android:id="@+id/btnSetTime"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lblRepeat"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        >
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnMon"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnTue"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnWed"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnThu"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnFri"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnSat"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnSun"/>
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view1"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm name"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lblAlarmName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/txtAlarmName"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view2"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set steps"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtSteps"/>
+    <NumberPicker
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/numberPicker"
+        android:layout_marginTop="10dp"></NumberPicker>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view3"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snooze"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lblSnooze"/>
+
+        <Switch
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textSize="10dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="275dp"
+            android:id="@+id/snoozeOnOff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Cancel"
+            android:background="@android:color/holo_red_dark"
+            android:id="@+id/btnCancelAlarm"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Save"
+            android:background="@android:color/holo_green_dark"
+            android:id="@+id/btnSaveAlarm"
+            android:layout_marginLeft="80dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
