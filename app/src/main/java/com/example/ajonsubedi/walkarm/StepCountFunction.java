@@ -7,6 +7,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Messenger;
 import android.util.Log;
@@ -25,8 +26,8 @@ public class StepCountFunction {
     public String stepCounterText;
     public String stepDetectorTimeText;
 
-    private String isSupportStepDetector;
-    private String isSupportStepCounter;
+    public String isSupportStepDetector;
+    public String isSupportStepCounter;
 
     private SensorManager sensorManager; // = een systeem service, gebruik voor om bepaalde sensor te krijgen
 
@@ -55,13 +56,16 @@ public class StepCountFunction {
 
     }
 
-    private void initListener()
+    public void initListener(final TextView stepCounter, final TextView stepDetector, final TextView stepDetectorTime)
     {
         stepCounterListener = new SensorEventListener() {
             @Override   //Deze methode wordt geactiveerd wanneer de nauwkeurigheid van de geregistreerde sensor verandert.
             public void onSensorChanged(SensorEvent sensorEvent) {
                 Log.e("Counter-SensorChanged",sensorEvent.values[0]+"---"+sensorEvent.accuracy+"---"+sensorEvent.timestamp);
                 stepCounterText = ("Totaal steps" + sensorEvent.values[0]);
+
+                if(stepCounterText != null || stepCounterText != "")
+                    stepCounter.setText(stepCounterText);
             }
 
             @Override //Deze methode wordt geactiveerd wanneer zich een nieuwe gebeurtenis voordoet op de geregistreerde sensor
@@ -77,6 +81,10 @@ public class StepCountFunction {
                 stepDetectorText = "huidige stap count" + sensorEvent.values[0];
                 stepDetectorTimeText = "huidig staptijd" + simpleDateFormat.format(sensorEvent.timestamp/1000000);
 
+                if (stepCounterText != null || stepCounterText != "") {
+                    stepDetector.setText(stepDetectorText);
+                    stepDetectorTime.setText(stepDetectorTimeText);
+                }
             }
 
             @Override
@@ -87,9 +95,15 @@ public class StepCountFunction {
 
     }
 
+    public void registerSensor( )
+    {
+        sensorManager.registerListener(stepCounterListener,stepCounter,SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(stepDetectorListener,stepDetector,sensorManager.SENSOR_DELAY_NORMAL);
+    }
+
     //Sensoor registeren betekent begint de sensor te gebruiken
     //unregister = stop met het gebruiken van sensoren
-    private void  unregisterSensor(Context context){
+    public void  unregisterSensor(Context context){
         if(context.getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_SENSOR_STEP_COUNTER)
                 &&
@@ -99,6 +113,7 @@ public class StepCountFunction {
             sensorManager.unregisterListener(stepDetectorListener);
         }
     }
+
 
 
 
