@@ -1,37 +1,42 @@
 package com.example.ajonsubedi.walkarm;
 
 import android.content.Context;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.ToggleButton;
-
 
 /**
- * Created by Ajon Subedi on 1/8/2018.
+ * Created by Ajon Subedi on 1/10/2018.
  */
 
 public class MyAlarmAdapter extends ArrayAdapter<String> {
-
-    public MyAlarmAdapter(Context context, String[] arr){super(context, -1, arr);}
-    /*public View getView(int position, View convertView, ViewGroup parent){
+    public MyAlarmAdapter(Context context, String[] alarmInfos) {super(context,R.layout.my_alarm_item, alarmInfos);}
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent){
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.my_alarm_item, null);
 
-        TextView alarmName = (TextView) view.findViewById(R.id.my_alarm_name_item);
-        TextView time = (TextView) view.findViewById(R.id.my_alarm_time_item);
-        TextView steps = (TextView) view.findViewById(R.id.my_alarm_steps_item);
-        ToggleButton toggleButton = (ToggleButton) view.findViewById(R.id.my_alarm_toggleButton_item);
+        //Get all content from my_alarm_item.xml
+        String listItem = getItem(position);
+        TextView alarmName = (TextView)view.findViewById(R.id.my_alarm_name_item);
+        TextView alarmTime = (TextView)view.findViewById(R.id.my_alarm_time_item);
+        TextView alarmRepeat = (TextView)view.findViewById(R.id.my_alarm_repeat_item);
+        TextView alarmSteps = (TextView)view.findViewById(R.id.my_alarm_steps_item);
+        Switch switchOnOffAlarm = (Switch)view.findViewById(R.id.my_alarm_switchButton_item);
 
-        alarmName.setText(Integer.toString(Integer.parseInt(getItem(position))));
-        time.setText(Integer.toString(Integer.parseInt(getItem(position))));
-        steps.setText(Integer.toString(Integer.parseInt(getItem(position))));
+        alarmName.setText(listItem);
+        alarmTime.setText(listItem);
+        alarmRepeat.setText(listItem);
+        alarmSteps.setText(listItem);
+        switchOnOffAlarm.setChecked(isEnabled(position));
 
-    }*/
+        return view;
+    }
 }
 
 
