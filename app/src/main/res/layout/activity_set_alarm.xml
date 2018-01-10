@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
-
+    android:orientation="vertical"
+    tools:context="com.example.ajonsubedi.walkarm.SetAlarmActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,14 +14,14 @@
         android:textSize="60dp"
         android:layout_gravity="center"
         android:id="@+id/txtSetTime"/>
-   <Button
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Set time"
-       android:background="@color/colorPrimaryDark"
-       android:textColor="@android:color/white"
-       android:layout_gravity="center"
-       android:id="@+id/btnSetTime"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set time"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:id="@+id/btnSetTime"/>
 
 
     <TextView
@@ -145,27 +144,22 @@
             android:id="@+id/snoozeOnOff"/>
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
         android:orientation="horizontal"
-        android:padding="5dp">
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:text="Cancel"
-            android:background="@android:color/holo_red_dark"
-            android:id="@+id/btnCancelAlarm"/>
+        android:padding="5dp"
+        >
+
         <Button
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Save"
             android:background="@android:color/holo_green_dark"
+            android:layout_gravity="center"
             android:id="@+id/btnSaveAlarm"
-            android:layout_marginLeft="80dp"/>
-    </LinearLayout>
-
-
+            />
+    </FrameLayout>
 
 </LinearLayout>

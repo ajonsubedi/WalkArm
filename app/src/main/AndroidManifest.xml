@@ -18,19 +18,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SetAlarmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".setAlarm"
-                  android:label="setAlarm"
-                  android:theme="@style/AppTheme">
-
-        <receiver android:name=".MyAlarmAdapter" />
-
+        <activity
+            android:name=".setAlarm"
+            android:label="setAlarm"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".NotificationActivity"></activity>
     </application>
 
 </manifest>

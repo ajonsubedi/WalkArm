@@ -26,13 +26,13 @@ public class MyAlarmAdapter extends ArrayAdapter<String> {
         TextView alarmName = (TextView)view.findViewById(R.id.my_alarm_name_item);
         TextView alarmTime = (TextView)view.findViewById(R.id.my_alarm_time_item);
         TextView alarmRepeat = (TextView)view.findViewById(R.id.my_alarm_repeat_item);
-        TextView alarmSteps = (TextView)view.findViewById(R.id.my_alarm_steps_item);
+//        TextView alarmSteps = (TextView)view.findViewById(R.id.my_alarm_steps_item);
         Switch switchOnOffAlarm = (Switch)view.findViewById(R.id.my_alarm_switchButton_item);
 
         alarmName.setText(listItem);
         alarmTime.setText(listItem);
         alarmRepeat.setText(listItem);
-        alarmSteps.setText(listItem);
+//        alarmSteps.setText(listItem);
         switchOnOffAlarm.setChecked(isEnabled(position));
 
         return view;
